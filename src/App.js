@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header.js';
+import Array from './components/Array.js';
+import React from 'react';
+
+export const Context = React.createContext();
+export const Algorithm = React.createContext();
+
 
 function App() {
+  const [showSort, setShowSort] = React.useState(false);
+  const [algorithm, setAlgorithm] = React.useState("");
+  const [nums, setNums] = React.useState([1, 3, 5, 6, 3, 5, 7, 4, 2, 6, 7, 8, 9, 3, 5, 7, 8, 9, 2, 4]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context.Provider value={{showSort,setShowSort}}>
+      <Algorithm.Provider value={{algorithm,setAlgorithm,nums,setNums}}>
+        <Header></Header>
+        <Array></Array>
+      </Algorithm.Provider>
+    </Context.Provider>
   );
 }
 
