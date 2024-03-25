@@ -17,7 +17,7 @@ Sorting Visualizer is a web application built with React that allows users to vi
 - Adjustable speed control for visualization.
 
 ## Demo
-[Insert Demo Link Here]
+[Visual-Sorrt](https://visual-sorrt.netlify.app/)
 
 ## Installation
 1. Clone the repository: 
